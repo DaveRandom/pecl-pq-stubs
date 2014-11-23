@@ -17,8 +17,6 @@ use pq\Exception\DomainException;
  * @property-read bool $busy Whether the connection is busy with asynchronous operations
  * @property-read string $errorMessage Any error message on failure
  * @property-read array $eventHandlers List of registered event handlers
- * @property-read string $encoding Connection character set
- * @property-read bool $unbuffered Whether to fetch asynchronous results in unbuffered mode, i.e. each row generates a distinct Result instance
  * @property-read string $db The database name of the connection
  * @property-read string $user The user name of the connection
  * @property-read string $pass The password of the connection
@@ -69,6 +67,20 @@ class Connection
     const EVENT_NOTICE = 'notice';
     const EVENT_RESULT = 'result';
     const EVENT_RESET = 'reset';
+
+    /**
+     * Connection character set
+     *
+     * @var string
+     */
+    public $encoding;
+
+    /**
+     * Whether to fetch asynchronous results in unbuffered mode, i.e. each row generates a distinct Result instance
+     *
+     * @var bool
+     */
+    public $unbuffered;
 
     /**
      * Default fetch type for future Result instances
