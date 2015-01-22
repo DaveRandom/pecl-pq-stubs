@@ -1,0 +1,11 @@
+{
+  "name": "daverandom/pecl-pq-stubs",
+  "description": "Stubs for the PECL/pq extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Chris Wright",
+      "email": "daverandom@php.net"
+    }
+  ]
+}
