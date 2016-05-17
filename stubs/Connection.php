@@ -83,6 +83,13 @@ class Connection
     public $unbuffered;
 
     /**
+     * Whether to use non-blocking writes
+     *
+     * @var bool
+     */
+    public $nonblocking;
+
+    /**
      * Default fetch type for future Result instances
      *
      * @var int
@@ -207,6 +214,15 @@ class Connection
      * @throws BadMethodCallException
      */
     public function getResult() {}
+
+    /**
+     * Flush pending data to the server in non-blocking mode
+     *
+     * @return bool
+     * @throws BadMethodCallException
+     * @throws RuntimeException
+     */
+    public function flush() {}
 
     /**
      * Listen on $channel for notifications
